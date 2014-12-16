@@ -26,7 +26,7 @@ public class BinarySearch {
         
         int i = lowerIndex;
         int j = higherIndex;
-        int pivot = array[lowerIndex+(higherIndex-lowerIndex)/2];
+        int pivot = array[lowerIndex + (higherIndex - lowerIndex) / 2];
         while (i <= j) {
             while (array[i] < pivot) {
                 i++;
@@ -53,7 +53,7 @@ public class BinarySearch {
     }
 	
 	public static int searchNumber(int num, int [] numArr) {
-		int retVal=-1, min  = 0, max  = numArr.length - 1, mid = (min + max)/2;
+		int retVal = -1, min  = 0, max  = numArr.length - 1, mid = (min + max)/2;
 	 
 	    while( min <= max )
 	    {
@@ -61,13 +61,13 @@ public class BinarySearch {
 	        min = mid + 1;    
 	      else if ( array[mid] == num ) 
 	      {
-	        retVal = mid+1;
+	        retVal = mid + 1;
 	        break;
 	      }
 	      else
 	         max = mid - 1;
 	 
-	      mid = (min + max)/2;
+	      mid = (min + max) / 2;
 	   }
 	   if ( min > max )
 	      retVal = -1;
@@ -78,10 +78,11 @@ public class BinarySearch {
 	public static void main(String args[]) throws IOException {
 		System.out.println("\tBinary Search Program\n\n");
 		System.out.println("Generating random numbers...\n");
-		for(int i=1;i<=100;i++) {
-			array[i-1] = randomNumberGenerator(10,500);
-			System.out.print("\t"+array[i-1]);
-			if(i%10==0)
+		//To generate 100 random numbers
+		for(int i = 1; i <= 100; i++) {
+			array[i - 1] = randomNumberGenerator(10,500); //Numbers generated are between 10 and 500
+			System.out.print("\t"+array[i - 1]);
+			if(i % 10 == 0)
 				System.out.println("\n");
 		}
 		System.out.println("\n\nEnter a number to search : ");
@@ -89,7 +90,7 @@ public class BinarySearch {
 		int i = Integer.parseInt(br.readLine());
 		sort(array);
 		int elemPos = searchNumber(i,array);
-		if(-1!=elemPos)
+		if(-1 != elemPos)
 			System.out.println("Search element is at "+elemPos+" position");
 		else
 			System.out.println("Search element not found!");
