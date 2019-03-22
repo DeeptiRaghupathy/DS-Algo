@@ -1,7 +1,4 @@
 DS-Algo
 =======
 
-Data Structures and Algorithms
-
-Test
-Command line text
+Data Structures and Algorithms practice programs
