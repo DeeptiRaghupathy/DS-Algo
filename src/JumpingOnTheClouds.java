@@ -1,4 +1,3 @@
-// https://www.hackerrank.com/challenges/jumping-on-the-clouds/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup
 import java.io.*;
 import java.math.*;
 import java.security.*;
@@ -9,6 +8,8 @@ import java.util.regex.*;
 import java.util.*;
 
 public class JumpingOnTheClouds {
+
+    // Complete the jumpingOnClouds function below.
     static int jumpingOnClouds(int[] c) {
         int jumps = 0;
         for(int i=0;i < c.length-1;i++) {
